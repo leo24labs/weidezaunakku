@@ -1,4 +1,4 @@
-# Lifepo4-Weidezaun-Akku (weidezaunakku)
+# LiFePO4-Weidezaun-Akku (weidezaunakku)
 
 Wiederaufladbarer **9-V-/9,6-V-LiFePO4-Akku** als **Drop-in-Ersatz** für 9-V-Trocken-
 batterien (Zink-Kohle/Alkaline) in bestehenden batteriebetriebenen Weidezaungeräten
