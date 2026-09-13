@@ -1,4 +1,4 @@
-# LiFePO4-Weidezaun-Akku (weidezaunakku)
+# LiFePO4-Weidezaun-Akku (lifepo4-weidezaun-akku)
 
 Wiederaufladbarer **9-V-/9,6-V-LiFePO4-Akku** als **Drop-in-Ersatz** für 9-V-Trocken-
 batterien (Zink-Kohle/Alkaline) in bestehenden batteriebetriebenen Weidezaungeräten
@@ -120,6 +120,6 @@ unterstütze ich gerne.
 
 ## Repo
 
-<https://github.com/leo24labs/weidezaunakku>
+<https://github.com/leo24labs/lifepo4-weidezaun-akku>
 
 ![QR-Code zum Repo](build/img/qr-repo.png)
