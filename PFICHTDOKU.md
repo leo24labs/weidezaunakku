@@ -10,6 +10,7 @@ Am Ende der Entwicklung müssen folgende Spezifikationen im Projekt vorhanden se
 | `docs/04_verifikation.md` | Teststrategie, Testfälle, Ergebnisse | verification-agent |
 | `docs/05_traceability.md` | Bidirektionale Rückverfolgbarkeit | traceability-agent |
 | `specs-cmp/*.md` | Komponenten-Spezifikationen (K1, K2-Zellen, K2-BMS, K3) zur **Komponenten-Auswahl** | komponenten-agent (SYS-Ebene) |
+| `build/*.md` | **Umsetzung:** Aufbau (`AUFBAU.md`), Verdrahtung (`VERDRAHTUNG.md`), Datenblätter (`datenblatt/`) der beschafften Komponenten | umsetzungs-ablage (Parallel zu docs/specs) |
 
 > **Kein SWE-Entwicklungsprojekt:** Die SWE-Phase (SWE.1…SWE.5 inkl. `docs/03a`
 > SWE-Architektur/Detaildesign, SWE-Verifikation) wird **bewusst nicht** durchgeführt.

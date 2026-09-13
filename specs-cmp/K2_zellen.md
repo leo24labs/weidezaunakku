@@ -65,6 +65,46 @@ Pouch) innerhalb der bestätigten Fachgeometrie (OQ-12/M2: Fach-Innenmaße akzep
 | 9 | Preis | Ziel-BOM je kWh → Gesamtpaket ≤ 120 EUR (OQ-07) | Stückkosten |
 | 10 | Liefer-/Verfügbarkeit | langfristig (≥ 6 Saisons, ggf. 2. Quelle) | Angebot |
 
+## 5.1 Auswahl-Kandidat: VariCore 3,2 V / 32 Ah LiFePO4 (prismatisch) — Stand 2026-09-13
+
+| Kennwert | Wert | Bezug Ziel / Bewertung |
+|----------|------|-------------------------|
+| Hersteller/Modell | VariCore LiFePO4 (prismatisch), 3,2 V Nenn, 32 Ah | Kandidat nach Spezifikation K2Z |
+| Topologie | **3S1P** (3 Zellen, 1 parallel) | Entscheidung Nutzer 2026-09-13: 3 Zellen à 32 Ah |
+| Pack-Kapazität | **32 Ah** (≥ 31 Ah Ziel) | K2Z-F02 ✓ (Redundanz ≈ +3 %) |
+| Pack-Nennenergie | **307,2 Wh** (3 × 102,4 Wh) | ≥ 298 Wh Ziel (K2Z-N03) ✓ |
+| Spannungsfenster | 2,5–3,65 V/Zelle ⇒ 7,5–10,95 V Pack | F-01 / K2Z-F01 ✓ |
+| Preis (Zellanteil) | 6 Zellen = 85,23 € ⇒ **14,21 €/Zelle; 3 Zellen ≈ 42,63 €** | OQ-07: sehr gut im Budget (K2Z-N08-Kostenkriterium) |
+| Maße (Klasse, verifiziert) | je Quelle **Variante A: 142 × 100 × 21 mm** bzw. **Variante B: 145 × 100 × 22 mm** (22/20 mm je Anbieter), vorwiegend M6-Anschluss | **Achtung: zwei abweichende Maßangaben im Umlauf** → an konkretem Stück bestätigen |
+| Gewicht (Klasse) | ~0,63–0,64 kg ⇒ **Block ≈ 1,9 kg** (≈ 162 Wh/kg) | K2Z-N05 günstiger als Ziel 2,8–3,3 kg (mehr Reserve), passt ✓ |
+| Spannungsfenster (Zelle) | Ladeschluss **3,65 V**, Entladeabschluss **2,0 V** (min., T>0 °C) | F-01 ✓; **2,0 V nur Zellwert — Abschaltung des Packs übernimmt BMS bei ≤ 2,5 V (S-01)** |
+| Laden | CC/CV, max. **1 C (32 A)**, empfohlen ~0,5 C | N-08/S-02 ✓ (K1 mit ≥ 30 W ≈ 0,1 C weit darunter) |
+| Entladen | max. ~2–3 C; Dauerentladung großzügig über Lastbedarf | F-02 ✓ |
+| Zyklenfestigkeit | **angewzeigt ~2000 Vollladungszyklen** (Anbieter-Angaben, „≥8000")
+      vs. **„≥ 2.000" (Langzeit-Anbieter)** | **N-07 (≥ 2000 @ 80 % DoD): knapp erfüllbar — 80 %-DoD gibt Reserve vs. 100 %-Zyklen; exakt zu verifizieren** |
+| Temperaturfenster (Zelle) | Laden +0…+45 °C; Entladen −20…+60 °C (Variante 30 Ah: −20…+60 °C) | K2Z-N01/N02 ✓ (Entladen −10…+40, Laden +0…+40 inkludiert) |
+| Selbstentladung | LiFePO4-typisch niedrig (~3–5 %/Monat, Messung offen) | N-04: Messung erforderlich |
+| Innenwiderstand | gemessen ~3 mΩ (Anbieter) | K2B-N03-Referenz, PF-Verluste minimal ✓ |
+| Offen (Datenblatt erforderlich) | EN 62133/UN3480/CE-Zertifikate; definitive Maße & Zyklenangabe des gelieferten Stücks | → Bewertung §5 Punkte 2–8 abschließen |
+
+**Vorbehalt:** Es kursieren **zwei Maß-/Zyklen-Varianten** derselben 32-Ah-Zelle
+(Variante A: 142×100×21 mm, „≥8000 Zyklen"; Variante B: 145×100×22 mm, „~2000 Zyklen",
+~631 g). Beide passen volumenmäßig in das Zell-Budget (je Zelle ≈ 0,30 l ⇒ Block
+≈ 0,9 l < Budget 1,0–1,2 l). Das **konkret gelieferte Stück** (Maße, Gewicht,
+Zyklenangabe, Zertifikate) ist beim Kauf/Angebot zu fixieren (CE-CAD- und Passtest M2).
+
+**Prüfpunkte vor Freigabe:**
+1. **Maße/Form:** gelieferte Zelle = Variante A oder B; Passtest M2 (Fach 185×155×125 mm).
+2. **Zyklenangabe:** „≥8000" vs. „~2000" klären — N-07 (≥2000 @ 80 % DoD) braucht die
+   **reale** Angabe des Anbieters; Kälte-/Lewes-Datenblatt anfordern.
+3. **Zertifikate:** EN 62133, UN3480, CE beim Anbieter erfragen (OQ-11).
+4. **Abschaltkopplung:** Zellwert 2,0 V ≠ Systemabschaltung 2,5 V (S-01) → BMS-Abschaltung
+   ist die verbindliche Grenze (Reihenprüfung mit BMS).
+
+**Nächster Schritt:** Angebot/Beleg des konkreten VariCore-32-Ah-Stücks anfordern
+(Maße, Gewicht, Zyklen, Zertifikate) und gegen §5 (Punkte 1–8 & 10) bewerten;
+Blatt in `build/datenblatt/` ablegen.
+
 ## 6. Normen & Zertifizierung (offen bis OQ-11)
 
 - EN 62133-Test der Zelle/des Blocks; UN3480-Transportprüfung; CE.
@@ -74,9 +114,9 @@ Pouch) innerhalb der bestätigten Fachgeometrie (OQ-12/M2: Fach-Innenmaße akzep
 
 | Punkt | Status |
 |-------|--------|
-| Zell-Formfaktor/Topologie-Detail (Zylinder vs. Prismatik; Bündelzahl) | Phase-P-Auswahl anhand der Kriterien §5 |
-| Konkreter Zell-Hersteller/BOM | nach Spezifikation + Angebot |
-| OQ-11 Zellabuse-/Transportnorm | offen (vor Zertifizierung) |
+| Variante A vs. B (Maße/Zyklen) — konkretes Stückfixieren | vor Kauf/Angebot zu klären |
+| Zyklenangabe: „≥8000" (Marketing) vs. „~2000" (Realisierbar) — N-07 80 %-DoD-Reserve prüfen | Bestätigung durch Anbieter erforderlich |
+| EN 62133/UN3480/CE-Zertifikate | offen (OQ-11, vor Serienzertifizierung) |
 
 ## 8. Traceability & Status
 

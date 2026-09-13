@@ -70,6 +70,79 @@ als redundanter Überladeschutz im Ladepfad (Rückkanal PF-11 zum externen Ladeg
 | 10 | Preis/BOM | Budget Q7 (≤ 120 EUR Gesamt, Anteil BMS) | Stückkosten |
 | 11 | Zertifikate | EN 62133-kompatibel, CE; Herstellertest-Hinweis | Zulassungen |
 
+## 5.1 Auswahl-Kandidat: 3S LiFePO4 BMS „mit Balance" (12 A / 15 A) — Stand 2026-09-13
+
+| Kennwert | Wert | Bezug Ziel / Bewertung |
+|----------|------|-------------------------|
+| Hersteller | **Lisolec** (Label der günstigen 3S-LiFePO4-BMS-Klasse), LiFePO4, **15-A-Ausführung mit Balance** | Kandidat nach Spezifikation K2B; Kauf über AliExpress 1005007786624222 |
+| Typ | 3-S BMS für **LiFePO4**, mit Balancierung (passiv) | K2B-F01 ✓, K2B-F09 ✓ (passiv = Referenz) |
+| Stromauslegung | **15 A Dauer-Entlade / 7 A Dauer-Lade** (gewählt: 15-A-Ausführung, LiFePO4) | Last-Zyklus 30–60 mA + Pulse weit darunter → Auslegung unkritisch (K2B-F07) |
+| Maße (Klasse) | typ. ≈ 56 × 45 × 3,5 mm (Verpackung Bestätigung), ≤ 20 mΩ Hauptpfad | K2B-N03 ✓ (Zehn-mΩ-Klasse) |
+| Preis | 2 Stück = 5,36 € ⇒ **2,68 €/Stück** (1 verbaut + 1 Reserve) | OQ-07 sehr gut |
+
+**Referenzkennwerte dieser BMS-Klasse (3-S LiFePO4, 7–15 A, „Balance") —
+verifizierte Datenblatt-Werte (Bestechpower LTF3S1-15A, AYAA PCM-L03S06-337,
+KLS/KLS-055, EYBMS PCM-L03S40):**
+
+| Parameter (Klasse) | typ. Wert | Prüfpunkt gegen Spez |
+|---------------------|-----------|-----------------------|
+| Ladespannung | N × 3,65 V ⇒ Pack ≈ 10,95 V | passt F-01 / K1-CV-Profil (N-08) ✓ |
+| Lade-Abschaltung (Überlade) | **3,65 V ± 0,025 V** (Bestechpower/AYAA-Spez) — Release ~3,55 V | deckend für S-02 (BMS redundant zum CV) ✓ |
+| Balance-Startspannung | **3,6 V**, Balance-Strom **36–58 mA** (modellabhängig) | passiv möglich (K2B-F09) ✓ |
+| Balance-Funktion | bei „mit Balance"-Varianten vorhanden (Bestechpower), einige ohne (EYBMS 40A) | beim Kauf prüfen (K2B-F09) |
+| **Überentladungsschutz** | **2,5 V ± 0,05 V** (Bestechpower, AYAA); **2,0 V** (EYBMS); **2,7 V** (KLS) | **S-01: 2,5-V-Variante ist in dieser Klasse verfügbar und gefordert** |
+| Entlade-Überstromschutz | ~20–45 A, Verzögerung ~10–100 ms | gegen Lastpulse F-02 (Pulsmuster) abzugrenzen |
+| Kurzschlussschutz | externe Last, Ansprech **0,35–0,8 ms**, Release = Lastfrei | K2B-F03 ✓ |
+| Eigenverbrauch (Klasse) | **≤ 20 µA** (AYAA/EYBMS-Spez, Ruhezustand < 0,1 µA) | K2B-N01 ✓ (< 1 mA, großzügig) |
+| Temperaturschutzeingang (NTC) | **modellabhängig** (KLS: vorhanden, 55 °C Laden / 70 °C Entladen; EYBMS: vorhanden; Bestechpower: k.A.) | K2B-F05 → bei Wahl bevorzugen, sonst separate PE-10-Sensorik |
+| Verpolungsschutz | **i. d. R. nicht belastbar vorhanden** | K2B-F04 → über PE-02-Eingangsschutz + mech. Klemmen-Sicherung S-04 abdecken |
+| Maße | 56×45×3,5 mm (t.io) bis 158×45×10 mm (Bestechpower-Klasse) | K2B-N03-Formfaktor in Pack prüfen |
+
+**Erkenntnis (2026-09-13):** Die Klasse bietet **2,5-V-Überentlade-Abschaltung**
+(Bestechpower, AYAA) — der S-01-Referenzwert ist damit **real verfügbar**, nicht nur
+Wunschziel. Die **exakte Schwelle des Lisolec-Modells** (2,5 V, 2,15 V oder 2,0 V)
+bestimmt letztlich die Eignung und ist vor Kauf zu bestätigen ($5.1-Kaufbeleg).
+
+### 5.2 Kaufbeleg / Listing-Verifikation (2026-09-13)
+
+- **Shop/Link:** AliExpress — `de.aliexpress.com/item/1005007786624222.html`
+- **Listing-Titel (verifiziert):** „LiFePO4 3S with Balance BMS 12A 15A 22A Protect
+  Plates Charging Module for 9.6V 18650 32650 32700 Lithium Iron Phosphate Battery"
+- **Bestätigt:** **LiFePO4-Chemie + 9,6-V-Pack (3S) mit Balance** — passt zu K2B-F01/F09 ✓
+- **Gekaufte Ausführung (Nutzerangabe 2026-09-13):** **15-A-Variante — Chemie LiFePO4**,
+  **Dauer-Entladestrom 15 A, Dauer-Ladestrom 7 A** („15A/7A") | Lastprofil 30–60 mA +
+  Pulse (F-02) und K1-Ladung ≥ 30 W ≈ 3,2 A liegen **weit unter** den Board-Grenzen →
+  Auslegung unkritisch (K2B-F07, N-01-Bilanz) ✓
+- **Nicht extrahierbar:** die **exakten Schwellwerte** (Überentlade 2,5 V?, Überlade
+  3,65 V?, NTC?, Balance-Strom, Maße) — AliExpress liefert die Spec als Bild/Javascript,
+  nicht als Text; Werte nur durch Kaufbeleg-Bild oder **Eingangsmessung (build/AUFBAU.md)**
+  zu verifizieren.
+
+**Wichtiger Chemie-Hinweis (Differenzierung Klasse):** Der Referenz-Suchtreffer zur
+Board-Klasse „DL-J04G3-L03S15ATJ" (tinytronics-PDF) beschreibt eine **3,7-V-Chemie-
+Variante** (12,6 V / 4,125 V-Schwellen) — **nicht** einsetzbar. Das Lisolec-Label
+vertreibt dieselbe Platinenfamilie **auch als LiFePO4-Version**; es muss explizit die
+**9,6-V-LiFePO4-Variante** (Ladeschluss ~3,65 V/Zelle) bestellt werden, sonst
+K2B-F02/S-01/S-02 verletzt (siehe kritischer Prüfpunkt 1).
+
+**Kritische Prüfpunkte vor Freigabe:**
+1. **Chemie-Variante:** Es muss die **LiFePO4-Version** sein (Ladeschluss ~3,65 V/
+   Zelle); eine 4,2-V-Lithium-Variante ist **nicht** einsetzbar (K2B-F02, S-01/S-02).
+2. **Überentladeschwelle:** Muss **≤ 2,5 V/Zelle** liegen (S-01, DoD ≈ 80 %, N-07) —
+   Klasse liefert 2,5 V (Bestechpower); **2,0-/2,15-V-Modelle ausschließen** oder
+   Zusatzabscheidung vorsehen. (**Achtung:** 2,0-V-Abschaltung ⇔ DoD > 80 % gefährdet
+   N-07, siehe Zellen-Datenblatt 2,0-V-Abschluss.)
+3. **Temperaturmanagement (K2B-F05):** nach NTC-Ausführung am Lisolec-Stück fragen —
+   vorhanden = Vorteil, sonst separate Sensorik PE-10 + eigene Auswertung.
+4. **Verpolungsschutz (K2B-F04):** über **PE-02 (Lade-Eingangsschutz) + mechanische
+   Klemmen-Sicherung S-04 (PE-07)** sicherstellen; BMS trägt nur bei (je nach Chip).
+5. **Überstrom-/Kurzschlussschutz (K2B-F03):** Schwelle + Auslösezeit gegen die
+   Lastimpulse der Zielgeräte abzugrenzen (Reihenmessung F-02/F-07).
+
+**Nächster Schritt:** Bestell-Beleg der 15-A-LiFePO4-Ausführung sichern; **Eingangsmessung**
+der konkreten Schwellwerte (Überlade/Überentlade, Balance-Anlauf, NTC, Maße) beim
+Wareneingang gemäß `build/AUFBAU.md`; Mess-Werte + Belegbild in `build/datenblatt/` ablegen.
+
 ## 6. Normen & Zertifizierung (offen bis OQ-11)
 
 - EN 62133 (Zelltest) + BMS-Schutzfunktionen in der Systemprüfung; CE; Transport UN3480.
@@ -79,7 +152,8 @@ als redundanter Überladeschutz im Ladepfad (Rückkanal PF-11 zum externen Ladeg
 
 | Punkt | Status |
 |-------|--------|
-| Konkreter BMS-IC/Board | nach Spezifikation + Angebot zu wählen |
+| **Lisolec 15-A-Ausführung im Kauf** — Chemie LiFePO4 (9,6 V), 15 A Entladen/7 A Laden (Nutzerangabe) | AliExpress 1005007786624222; exakte Schwellwerte erst per Eingangsmessung verifizierbar — **Warenkorb-Konfiguration gegen Beleg prüfen** |
+| Balance-Variante prüfen (einige 3-S-Boards ohne Balance, z. B. EYBMS 40 A) | Kaufbeleg |
 | Parametrier-Set (Schwellen, Hysterese, Derating) | Phase-P-Feintuning je Zell-Datenblatt |
 | OQ-11 Norm-/Abuse-Rahmen | offen (vor Zertifizierung) |
 
