@@ -16,7 +16,7 @@ und es zuverlässig versorgt:
 
 | Kenngröße | Zielwert |
 |-----------|----------|
-| Bauform | Drop-in in das Batteriefach (Max. 185 × 155 × 125 mm) |
+| Bauform | Drop-in in das Batteriefach (Max. 185 × 155 × 125 mm) "groß"|
 | Spannung | 9,6 V nominal (7,5–10,95 V, 3S-LiFePO4) |
 | Kapazität | ≥ 31 Ah (≈ 3 Wochen Betrieb ohne Laden) |
 | Ladezeit | ≤ 12 h (Ladegerät ≥ 30 W) |
