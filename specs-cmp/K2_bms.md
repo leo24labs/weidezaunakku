@@ -141,7 +141,7 @@ K2B-F02/S-01/S-02 verletzt (siehe kritischer Prüfpunkt 1).
 
 **Nächster Schritt:** Bestell-Beleg der 15-A-LiFePO4-Ausführung sichern; **Eingangsmessung**
 der konkreten Schwellwerte (Überlade/Überentlade, Balance-Anlauf, NTC, Maße) beim
-Wareneingang gemäß `build/AUFBAU.md`; Mess-Werte + Belegbild in `build/datenblatt/` ablegen.
+Wareneingang gemäß `build/AUFBAU.md`; Mess-Werte in `build/DATENBLATT_AKKU.md` §6 eintragen.
 
 ## 6. Normen & Zertifizierung (offen bis OQ-11)
 

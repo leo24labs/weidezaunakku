@@ -10,7 +10,8 @@
 ## Arbeitsschritte (geplant)
 
 1. **Komponenten-Beschaffung** — VariCore 3,2 V/32 Ah (3 Stück) + Lisolec 3-S-BMS (2 Stück).
-2. **Eingangsprüfung** — Maße/Gewicht, Datenblatt-Abgleich, Abmessungsdoku (siehe `datenblatt/`).
+2. **Eingangsprüfung** — Maße/Gewicht, Datenblatt-Abgleich, Abmessungsdoku (Eintrag in
+   `DATENBLATT_AKKU.md` §6).
    Bei BMS zusätzlich **Schwellen-Messung** (Überentlade-/Überladeschwelle, Balance-Anlauf,
    NTC-Pad) gegen K2B-Spez — AliExpress liefert die Spec nur als Bild.
 3. **Form-/Passprüfung** — Drop-in in das Batteriefach des Zielgeräts (Reihenmessung M2, docs/06).

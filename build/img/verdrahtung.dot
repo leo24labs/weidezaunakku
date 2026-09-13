@@ -1,0 +1,65 @@
+digraph Weidezaunakku {
+    rankdir=LR;
+    graph [fontname="Helvetica", labelloc="t",
+           label="Weidezaun-Akku K2 · Stromlaufplan / Verdrahtung (2026-09-13)\n3S1P LiFePO4 · Lisolec 3S-BMS (15 A/7 A) · Sicherung F1 (5 A) in P+"];
+    node  [fontname="Helvetica", fontsize=12, shape=box];
+    edge  [fontname="Helvetica", fontsize=11, color="#b22222"];
+
+    // ================= Zellabgriffe (Taps) =================
+    T3 [label="Z3  +"]
+    T2 [label="Z3 − / Z2 +" style="rounded"]
+    T1 [label="Z2 − / Z1 +" style="rounded"]
+    T0 [label="Z1  −" ]
+
+    // ================= Zellen in Serie =================
+    subgraph cluster_cells {
+        label="Zellblock 3S — 3 × VariCore 3,2 V / 32 Ah LiFePO4 (Serie)";
+        style="rounded"; color="#4a6da7";
+        C3 [label="Z3\n3,2 V · 32 Ah"]
+        C2 [label="Z2\n3,2 V · 32 Ah"]
+        C1 [label="Z1\n3,2 V · 32 Ah"]
+    }
+
+    // ================= BMS =================
+    subgraph cluster_bms {
+        label="Lisolec BMS (3S LiFePO4)";
+        style="rounded"; color="#2e8b57";
+        PAD_B3 [label="B3"]
+        PAD_B2 [label="B2"]
+        PAD_B1 [label="B1"]
+        PAD_Bm [label="B−"]
+        PAD_Pp [label="P+"]
+        PAD_Pm [label="P−"]
+    }
+
+    // ================= Sicherung F1 =================
+    F1  [label="F1 · 5 A" style="filled" fillcolor="#fff3bf"]
+
+    // ================= Last / Lade (PE-07) =================
+    subgraph cluster_load {
+        label="Last / Lade (Common Port · PE-07)";
+        style="rounded"; color="#b8860b";
+        KL [label="Klemme + (Last + / Lade +)"]
+        KM [label="Klemme − (Last − / Lade −)"]
+    }
+
+    // ---- Verknüpfungen ----
+    T3 -> C3 -> T2 [arrowhead=none]
+    T2 -> C2 -> T1 [arrowhead=none]
+    T1 -> C1 -> T0 [arrowhead=none]
+
+    PAD_B3 -> T3
+    PAD_B2 -> T2
+    PAD_B1 -> T1
+    PAD_Bm -> T0
+
+    PAD_Pp -> F1 [label="P+", fontcolor="#b22222"]
+    F1 -> KL [label="5 A"]
+    PAD_Pm -> KM
+
+    // ---- Übersichtliche Spalten-Anordnung ----
+    {rank=same; T3 C3 T2 C2 T1 C1 T0}
+    {rank=same; PAD_B3 PAD_B2 PAD_B1 PAD_Bm}
+    {rank=same; PAD_Pp PAD_Pm}
+    {rank=same; KL KM}
+}

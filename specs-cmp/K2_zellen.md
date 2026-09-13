@@ -103,7 +103,7 @@ Zyklenangabe, Zertifikate) ist beim Kauf/Angebot zu fixieren (CE-CAD- und Passte
 
 **Nächster Schritt:** Angebot/Beleg des konkreten VariCore-32-Ah-Stücks anfordern
 (Maße, Gewicht, Zyklen, Zertifikate) und gegen §5 (Punkte 1–8 & 10) bewerten;
-Blatt in `build/datenblatt/` ablegen.
+Blatt in `build/DATENBLATT_AKKU.md` (Pack-Datenblatt) ablegen.
 
 ## 6. Normen & Zertifizierung (offen bis OQ-11)
 
