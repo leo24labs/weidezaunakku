@@ -55,7 +55,6 @@ verifiziert; Beschaffung/Umsetzung sind vorbereitet, Aufbau und Eingangsmessung 
 | Bestätigungs-Messungen (M1, M2) | `docs/06_milestones_messungen.md` | **bestätigt 2026-09-13** |
 | Komponenten-Spezifikationen (Auswahl) | `specs-cmp/K1_ladegeraet.md`, `K2_zellen.md`, `K2_bms.md`, `K3_solarmodul.md` | K2 (Zellen/BMS) weitgehend verifiziert; K1/K3 ausgestellt |
 | **Umsetzung** (Aufbau, Verdrahtung, Pack-Datenblatt) | `build/AUFBAU.md`, `VERDRAHTUNG.md`, `DATENBLATT_AKKU.md` | vorbereitet |
-| Register & Anforderungen an Artefakte | `PFICHTDOKU.md` | laufend |
 
 Die aktuelle Planung ist in drei Komponenten gegliedert:
 
