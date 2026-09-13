@@ -111,12 +111,11 @@ mechanische Kenndaten, Schutzfunktionen, Messprotokoll) ist `build/DATENBLATT_AK
 - Bei Beschädigung oder Aufblähung nicht weiterverwenden; fachgerecht entsorgen
   (Altbatterie/Lithium – UN3480-Transportklasse beachten).
 
-## Mitmachen / Arbeitsweise
+## Mitmachen
 
-- Gemeinsame Entwicklung im Repo `weidezaunakku` (GitHub, branch `main`).
-- **Commits nur nach Freigabe**, Push nach Review/Strukturprüfung.
-- Doku findet parallel in `docs/` (SYS-Spezifikation), `specs-cmp/` (Komponentenwahl)
-  und `build/` (Umsetzung) statt.
+Feedback gerne an **leo24labs@proton.me**.
+
+Bei der Umsetzung eines eigenen Akkus nach dem hier veröffentlichten Vorgabe unterstütze ich gerne.
 
 ## Repo
 
