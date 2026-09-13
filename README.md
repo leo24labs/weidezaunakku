@@ -38,7 +38,11 @@ physische Architektur). Zwei Kern-Messungen am realen Gerät sind **bestätigt**
 
 Stand der Komponenten-Auswahl: **Zellen (VariCore 32 Ah LiFePO4, 3 Stück)** und
 **BMS (Lisolec 3-S LiFePO4, 15 A/7 A)** sind als Kandidaten dokumentiert und weitgehend
-verifiziert; Beschaffung/Umsetzung sind vorbereitet, Aufbau und Eingangsmessung stehen noch aus.
+verifiziert; Ist-Maße 18,4 × 13,4 × 8,9 cm / 2,6 kg am Prototyp bestätigt.
+
+## Prototyp
+
+![Erster Prototyp des Akku-Packs](build/img/beispiel-akku-pt1.png)
 
 > **Kein SWE-Projekt:** Dieses Projekt führt die SWE-Phase (Software-Engineering nach
 > ASPICE SWE.1…SWE.5) bewusst **nicht** durch. Die Komponenten werden **nach
