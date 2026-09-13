@@ -20,7 +20,7 @@ und es zuverlässig versorgt:
 | Spannung | 9,6 V nominal (7,5–10,95 V, 3S-LiFePO4) |
 | Kapazität | ≥ 31 Ah (≈ 3 Wochen Betrieb ohne Laden) |
 | Ladezeit | ≤ 12 h (Ladegerät ≥ 30 W) |
-| Lebensdauer | ≥ 1000 Zyklen bei 80 % Entladetiefe - 40 Jahre |
+| Lebensdauer | ≥ 1000 Zyklen bei 80 % Entladetiefe (≈ 40 Jahre) |
 | Preis | Verkauf ≤ 120 EUR |
 | Schutz | IPx4, Temperatur-/Tiefentlade-/Überlade-/Kurzschlussschutz |
 
