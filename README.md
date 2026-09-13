@@ -115,7 +115,7 @@ mechanische Kenndaten, Schutzfunktionen, Messprotokoll) ist `build/DATENBLATT_AK
 
 Feedback gerne an **leo24labs@proton.me**.
 
-Bei der Umsetzung eines eigenen Akkus nach dem hier veröffentlichten Vorgabe unterstütze ich gerne.
+Bei der Umsetzung eines eigenen Akkus nach der hier veröffentlichten Vorgabe unterstütze ich gerne.
 
 ## Repo
 
