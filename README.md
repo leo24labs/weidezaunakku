@@ -8,14 +8,14 @@ der 9-V-Klasse (z. B. Gallagher BA-Serie, Koltec, AKO).
 
 - 9-V-Trockenbatterien in Weidezaungeräten sind teuer, schwach und landen regelmäßig
   im Müll.
-- Ein **wiederaufladbarer Akku** spart Kosten über viele Saisons, reduziert Abfall und
-  liefert über den Entladeverlauf mehr nutzbare Energie als Primärbatterien.
+- Ein **wiederaufladbarer Akku** spart über die Zeit Kosten und reduziert Abfall als
+  Primärbatterien.
 - Das Pack ist ein **reiner Ersatz**: Es muss ohne Umbau in vorhandene Geräte passen
   (**Drop-in**) und dieselbe elektrische Arbeit liefern.
 
 ## Ziel
 
-Ein Akku-Pack, das in ein bestehendes Weidezaungerät eingesetzt wird und es über die
+Ein Akku, welcher in ein bestehendes Weidezaungerät eingesetzt wird und es über die
 Weidesaison zuverlässig versorgt:
 
 | Kenngröße | Zielwert |
