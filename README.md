@@ -117,3 +117,9 @@ mechanische Kenndaten, Schutzfunktionen, Messprotokoll) ist `build/DATENBLATT_AK
 - **Commits nur nach Freigabe**, Push nach Review/Strukturprüfung.
 - Doku findet parallel in `docs/` (SYS-Spezifikation), `specs-cmp/` (Komponentenwahl)
   und `build/` (Umsetzung) statt.
+
+## Repo
+
+<https://github.com/leo24labs/weidezaunakku>
+
+![QR-Code zum Repo](build/img/qr-repo.png)
